@@ -2,6 +2,7 @@
   "name": "backend-ir-system",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "dev": "concurrently -n docker,server -c green,blue \"docker compose up -d mongo && docker compose logs -f mongo\" \"ts-node-dev --respawn --transpile-only index.ts\"",

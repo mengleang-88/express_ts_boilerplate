@@ -1,5 +1,6 @@
-import { User } from '@/models/User';
-import { PrismaClient } from '@prisma/client';
+import { User } from '../models/User';
+import { PrismaClient } from '@prisma/generated/client';
+import { prisma as prismaSingaton } from '../config/prisma';
 
 export interface UserInput {
   name: string;
@@ -19,7 +20,7 @@ export class UserRepository implements UserRepository {
   private prisma: PrismaClient;
 
   constructor(prisma?: PrismaClient) {
-    this.prisma = prisma ?? new PrismaClient();
+    this.prisma = prisma ?? prismaSingaton;
   }
 
   async findById(id: string): Promise<User | null> {

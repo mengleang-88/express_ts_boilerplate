@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { UserRepository } from '@/repositories/UserRepository';
-import { createUserSchema, updateUserSchema } from '@/models/UserDTO';
+import { UserRepository } from '../repositories/UserRepository';
+import { createUserSchema, updateUserSchema } from '../models/UserDTO';
 
 const userRepo = new UserRepository();
 const router = Router();
