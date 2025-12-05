@@ -1,5 +1,5 @@
 import { User } from '../models/User';
-import { PrismaClient } from '@prisma/generated/client';
+import { PrismaClient } from '../../generated/client';
 import { prisma as prismaSingaton } from '../config/prisma';
 
 export interface UserInput {
@@ -39,7 +39,9 @@ export class UserRepository implements UserRepository {
   }
 
   async create(input: UserInput): Promise<User> {
-    const created = await this.prisma.user.create({ data: { name: input.name, email: input.email } });
+    const created = await this.prisma.user.create({
+      data: { name: input.name, email: input.email },
+    });
     return this.map(created);
   }
 

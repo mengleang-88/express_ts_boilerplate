@@ -1,5 +1,7 @@
 node_modules
+generated/
 dist
 .env
 coverage
 pnpm-lock.yaml
+.vscode/settings.json
