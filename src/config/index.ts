@@ -8,7 +8,7 @@ const num = (val: string | undefined, fallback: number) => {
 };
 
 export const config = {
-  port: num(process.env.PORT, 3000),
+  port: num(process.env.PORT, 3223),
 } as const;
 
 export type AppConfig = typeof config;
