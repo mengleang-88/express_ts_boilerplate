@@ -1,6 +1,6 @@
-import { User } from '../models/User';
-import { PrismaClient } from '../../generated/client';
-import { prisma as prismaSingaton } from '../config/prisma';
+import { User } from '@/models/User';
+import { PrismaClient } from '@prisma/generated/client';
+import { prisma as prismaSingaton } from '@/config/prisma';
 
 export interface UserInput {
   name: string;
