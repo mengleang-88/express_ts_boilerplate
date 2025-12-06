@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "concurrently -n docker,server -c green,blue \"docker compose up -d && docker compose logs -f\" \"tsx watch index.ts\"",
     "dev:server": "tsx watch index.ts",
+    "postinstall": "prisma generate",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "test": "jest",

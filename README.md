@@ -5,14 +5,15 @@
 Prerequisites:
 - Node.js 18+ and pnpm
 
-Install dependencies:
-```bash
-pnpm install
-```
-
 Create environment file:
 ```bash
 cp .env.example .env
+```
+
+Install dependencies:
+```bash
+pnpm install
+pnpm postinstall
 ```
 
 Run in development:
